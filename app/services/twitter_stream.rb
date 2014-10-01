@@ -6,9 +6,8 @@ class TwitterStream
     @client = client
   end
 
-  def filter(locations)
-    locations = locations.join(",")
-    @client.filter(:locations => locations) do |tweet|
+  def filter(location)
+    @client.filter(:locations => location) do |tweet|
       yield tweet
     end
   end
