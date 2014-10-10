@@ -11,8 +11,6 @@ namespace :twitter do
         city, redis, client
       )
     end
-
     threads.each {|t| t.join; puts "Joining Thread"  }
   end
-
 end

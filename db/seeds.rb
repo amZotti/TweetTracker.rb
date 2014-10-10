@@ -6,37 +6,39 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-sf_keywords = [
-  "the",
-  "a"
-]
-
-vegas_keywords = [
-  "and",
-  "on"
-]
-
 #sf_keywords = [
-#  "google san francisco",
-#  "google sfo",
-#  "goog sfo",
-#  "345 spear",
-#  "warehouse 6",
-#  "warehouse cafe"
+#  "it is",
+#  "on the",
+#  "if it"
 #]
 #
 #vegas_keywords = [
-#  "marquee las vegas",
-#  "marquee vegas",
-#  "marquee cosmo",
-#  "marquee cosmopolitan",
-#  "marquee club",
-#  "@marqueelv",
-#  "marquee pool",
-#  "marquee nightclub",
-#  "marquee dj",
-#  "marquee dayclub"
+#  "and on",
+#  "when the",
+#  "for the"
 #]
+
+sf_keywords = [
+  "google san francisco",
+  "google sfo",
+  "goog sfo",
+  "345 spear",
+  "warehouse 6",
+  "warehouse cafe"
+]
+
+vegas_keywords = [
+  "marquee las vegas",
+  "marquee vegas",
+  "marquee cosmo",
+  "marquee cosmopolitan",
+  "marquee club",
+  "@marqueelv",
+  "marquee pool",
+  "marquee nightclub",
+  "marquee dj",
+  "marquee dayclub"
+]
 
 City.create(
   name: "Las Vegas",
