@@ -1,6 +1,4 @@
 class CityDataCatcher
-
-
   def self.catch_async(city, redis, client)
     Thread.new do
       city.keywords.each do |k|
@@ -22,6 +20,7 @@ class CityDataCatcher
         if matches.length > 0
           matches.each do |keyphrase|
             key = "#{city.slug}_#{keyphrase.underscore}"
+            puts "#{key} keyword detected"
             redis.incr key
 
             puts "Found match for #{key}:"
@@ -41,6 +40,7 @@ class CityDataCatcher
       # add it to the list of matched selectors.
       result << selector if text.match(/#{selector}/)
     end
+    puts result
     return result
   end
 

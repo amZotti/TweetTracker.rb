@@ -2,6 +2,7 @@ namespace :twitter do
 
   desc "Stream matching tweets into redis"
   task stream: :environment do
+    puts "Listening for Tweets"
 
     redis = RedisClient.client
     client = TwitterClient.client
